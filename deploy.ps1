@@ -51,8 +51,8 @@ Write-Host "3. Click 'Import Project'" -ForegroundColor White
 Write-Host "4. Select your 'textshare' repository" -ForegroundColor White
 Write-Host "5. Add these environment variables:" -ForegroundColor White
 Write-Host "   - DATABASE_URL (from Neon.tech)" -ForegroundColor Cyan
-Write-Host "   - RESEND_API_KEY (already have: YOUR_RESEND_API_KEY_HERE)" -ForegroundColor Cyan
-Write-Host "   - ADMIN_EMAIL (omdeshpande123456789@gmail.com)" -ForegroundColor Cyan
+Write-Host "   - RESEND_API_KEY (get from Resend.com dashboard)" -ForegroundColor Cyan
+Write-Host "   - ADMIN_EMAIL (your email address)" -ForegroundColor Cyan
 Write-Host "6. Click 'Deploy'" -ForegroundColor White
 Write-Host "`n7. After deployment, run:" -ForegroundColor Yellow
 Write-Host "   npx prisma db push" -ForegroundColor Cyan
