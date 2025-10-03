@@ -51,17 +51,17 @@ export default function Home() {
           </div>
 
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] tracking-tight max-w-4xl mx-auto mb-3 sm:mb-4 px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.2] tracking-tight max-w-4xl mx-auto mb-3 sm:mb-4 px-2"
             style={{ animation: "none" }}
           >
             <span
-              className="block animate-fade-up text-white dark:text-white light:text-text-dark"
+              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-2"
               style={{ animationDelay: "0.06s" }}
             >
               Share literally
             </span>
             <span
-              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer"
+              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-2"
               style={{ 
                 animationDelay: "0.16s",
                 backgroundSize: "200% auto"
