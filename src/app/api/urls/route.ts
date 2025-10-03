@@ -142,9 +142,14 @@ export async function POST(req: NextRequest) {
       },
     });
 
+    // Get the base URL from request headers
+    const host = req.headers.get('host') || 'localhost:3000';
+    const protocol = req.headers.get('x-forwarded-proto') || 'http';
+    const baseUrl = `${protocol}://${host}`;
+
     return NextResponse.json({
       slug: url.slug,
-      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/u/${url.slug}`,
+      shortUrl: `${baseUrl}/u/${url.slug}`,
       originalUrl: url.originalUrl,
       createdAt: url.createdAt,
       expiresAt: url.expiresAt,
