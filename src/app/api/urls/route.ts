@@ -157,8 +157,13 @@ export async function POST(req: NextRequest) {
 
   } catch (error) {
     console.error("Error creating short URL:", error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to create short URL" },
+      { 
+        error: "Failed to create short URL",
+        message: errorMessage,
+        details: error instanceof Error ? error.stack : undefined
+      },
       { status: 500 }
     );
   }

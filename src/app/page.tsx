@@ -7,20 +7,20 @@ import FloatingActionMenu from "@/components/FloatingActionMenu";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-surface-900 dark:bg-surface-900 light:bg-surface-cream text-white dark:text-white light:text-text-dark relative overflow-hidden">
+    <div className="min-h-screen bg-gray-50 dark:bg-surface-900 text-gray-900 dark:text-white relative overflow-hidden">
       {/* ANIMATED BACKGROUND LAYERS */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Mesh Gradient Base - Subtle Navy */}
-        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-20 dark:opacity-20 light:opacity-10" />
+        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-5 dark:opacity-20" />
         
         {/* Floating Orbs - Navy Blue Theme */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-brand-500/10 dark:bg-brand-500/10 light:bg-white rounded-full blur-[120px] animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 dark:bg-accent/10 light:bg-accent/5 rounded-full blur-[120px] animate-float-slow" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/5 dark:bg-brand-500/5 light:bg-brand-500/3 rounded-full blur-[150px] animate-breathe" />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 dark:bg-brand-500/10 rounded-full blur-[120px] animate-float" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 dark:bg-accent/10 rounded-full blur-[120px] animate-float-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100 dark:bg-brand-500/5 rounded-full blur-[150px] animate-breathe" />
         
         {/* Animated Grid - Subtle Navy */}
         <div 
-          className="absolute inset-0 opacity-[0.02] dark:opacity-[0.02] light:opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04] dark:opacity-[0.02]"
           style={{
             backgroundImage: `linear-gradient(rgba(26, 95, 180, 0.2) 1px, transparent 1px), 
                              linear-gradient(90deg, rgba(26, 95, 180, 0.2) 1px, transparent 1px)`,
@@ -30,7 +30,7 @@ export default function Home() {
         />
         
         {/* Spotlight Effect */}
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-surface-900/30 dark:to-surface-900/30 light:to-surface-cream/50 animate-spotlight" />
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-100/50 dark:to-surface-900/30 animate-spotlight" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-4 sm:px-6 py-8 sm:py-12 md:py-16">
@@ -38,14 +38,14 @@ export default function Home() {
         <header className="mb-8 sm:mb-12 text-center">
           {/* Glowing Badge */}
           <div 
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 dark:bg-white/5 light:bg-white border border-white/10 dark:border-white/10 light:border-brand-300 backdrop-blur-md mb-4 sm:mb-6 animate-fade-up shadow-glow-sm light:shadow-brand-200/50 text-xs sm:text-sm"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white dark:bg-white/5 border border-blue-200 dark:border-white/10 backdrop-blur-md mb-4 sm:mb-6 animate-fade-up shadow-md dark:shadow-glow-sm text-xs sm:text-sm"
             style={{ animationDelay: "0s" }}
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
             </span>
-            <span className="font-medium text-brand-400 dark:text-brand-400 light:text-brand-600">
+            <span className="font-medium text-brand-600 dark:text-brand-400">
               Slay Mode Activated 🔥
             </span>
           </div>
@@ -55,13 +55,13 @@ export default function Home() {
             style={{ animation: "none" }}
           >
             <span
-              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-1 sm:mb-2"
+              className="block animate-fade-up text-gray-900 dark:text-white mb-1 sm:mb-2"
               style={{ animationDelay: "0.06s" }}
             >
               Share literally
             </span>
             <span
-              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-1 sm:pt-2 pb-2"
+              className="block animate-fade-up bg-gradient-to-r from-brand-500 via-indigo-500 to-blue-600 bg-clip-text text-transparent animate-text-shimmer pt-1 sm:pt-2 pb-2"
               style={{ 
                 animationDelay: "0.16s",
                 backgroundSize: "200% auto"
@@ -72,7 +72,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 dark:text-white/60 light:text-text-dark/70 max-w-2xl mx-auto animate-fade-up leading-relaxed px-6 sm:px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-white/60 max-w-2xl mx-auto animate-fade-up leading-relaxed px-6 sm:px-4"
             style={{ animationDelay: "0.26s" }}
           >
             Text, files, URLs, QR codes & bio links—all in one place. Zero signup, max vibes fr fr ✨
@@ -82,15 +82,15 @@ export default function Home() {
         {/* QUICK ACTION GRID - Above the fold */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
           {/* CODE ENTRY - Left side */}
-          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/5 to-white/10 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/10 dark:border-white/10 light:border-brand-300 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-lg light:shadow-brand-200/50">
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-accent/5 to-brand-500/5 animate-gradient-xy" />
+          <div className="relative rounded-xl sm:rounded-2xl bg-white dark:bg-gradient-to-br dark:from-white/5 dark:to-white/10 border border-blue-200 dark:border-white/10 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 dark:from-brand-500/5 dark:via-accent/5 dark:to-brand-500/5 animate-gradient-xy" />
             
             <div className="relative z-10">
               <div className="text-center mb-3 sm:mb-6">
-                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
+                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
                   Got a code? 👀
                 </h2>
-                <p className="text-xs sm:text-sm text-white/50 dark:text-white/50 light:text-text-dark/60">Enter to access your content</p>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-white/50">Enter to access your content</p>
               </div>
 
               <CodeEntry />

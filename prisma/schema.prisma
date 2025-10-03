@@ -41,6 +41,7 @@ model File {
   originalName String
   mimeType     String
   size         Int
+  fileData     String   // Base64 encoded file data for Vercel compatibility
   title        String?
   passwordHash String?
   downloadCount Int     @default(0)

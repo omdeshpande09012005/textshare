@@ -100,6 +100,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "validation", details: err.flatten() }, { status: 400 });
     }
     console.error("/api/pastes error:", err);
-    return NextResponse.json({ error: "internal" }, { status: 500 });
+    
+    // Return detailed error for debugging
+    const errorMessage = err instanceof Error ? err.message : String(err);
+    const errorStack = err instanceof Error ? err.stack : undefined;
+    
+    // Log detailed error info
+    console.error("Detailed paste error:", {
+      message: errorMessage,
+      stack: errorStack,
+      error: JSON.stringify(err, null, 2)
+    });
+    
+    return NextResponse.json({ 
+      error: "internal",
+      message: errorMessage,
+      details: process.env.NODE_ENV === "development" ? errorStack : undefined
+    }, { status: 500 });
   }
 }

@@ -4,9 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { LIMITS, formatFileSize, calculateExpiryDate } from "@/lib/limits";
 import { checkRateLimit, checkUploadRateLimit } from "@/lib/rate-limit";
 import bcrypt from "bcryptjs";
-import { writeFile, mkdir } from "fs/promises";
 import path from "path";
-import { existsSync } from "fs";
 
 // Generate a random short code (slug)
 function generateSlug(): string {
@@ -118,16 +116,10 @@ export async function POST(req: NextRequest) {
     const ext = path.extname(file.name);
     const filename = `${slug}_${timestamp}${ext}`;
     
-    // Save file to public/uploads
-    const uploadDir = path.join(process.cwd(), "public", "uploads");
-    if (!existsSync(uploadDir)) {
-      await mkdir(uploadDir, { recursive: true });
-    }
-
-    const filePath = path.join(uploadDir, filename);
+    // Convert file to base64 for database storage (Vercel-compatible)
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    await writeFile(filePath, buffer);
+    const fileData = buffer.toString('base64');
 
     // Hash password if provided
     let passwordHash = null;
@@ -160,7 +152,7 @@ export async function POST(req: NextRequest) {
       expiresAt = calculateExpiryDate(LIMITS.EXPIRATION.DEFAULT_FILE_EXPIRY_DAYS);
     }
 
-    // Create file record in database
+    // Create file record in database with base64 data
     const fileRecord = await prisma.file.create({
       data: {
         slug,
@@ -168,6 +160,7 @@ export async function POST(req: NextRequest) {
         originalName: file.name,
         mimeType: file.type || "application/octet-stream",
         size: file.size,
+        fileData, // Store base64 encoded file data
         title: title || null,
         passwordHash,
         expiresAt,
@@ -187,8 +180,21 @@ export async function POST(req: NextRequest) {
 
   } catch (error) {
     console.error("Error uploading file:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    const errorStack = error instanceof Error ? error.stack : undefined;
+    
+    // Log detailed error for debugging in production
+    console.error("Detailed error:", {
+      message: errorMessage,
+      stack: errorStack,
+      error: JSON.stringify(error, null, 2)
+    });
+    
     return NextResponse.json(
-      { error: "Failed to upload file" },
+      { 
+        error: "Failed to upload file",
+        details: process.env.NODE_ENV === "development" ? errorMessage : undefined
+      },
       { status: 500 }
     );
   }
