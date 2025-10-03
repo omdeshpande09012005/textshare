@@ -70,19 +70,19 @@ export default function FloatingActionMenu() {
       )}
 
       {/* Menu Items */}
-      <div className="fixed bottom-24 right-8 flex flex-col gap-3 z-50">
+      <div className="fixed bottom-20 sm:bottom-24 right-4 sm:right-8 flex flex-col gap-2 sm:gap-3 z-50">
         {isOpen && menuItems.map((item, index) => (
           <Link
             key={item.href}
             href={item.href}
             onClick={() => setIsOpen(false)}
-            className={`group flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-r ${item.color} shadow-lg hover:shadow-glow-md transform hover:scale-105 transition-all duration-300 animate-scale-up`}
+            className={`group flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r ${item.color} shadow-lg hover:shadow-glow-md transform hover:scale-105 transition-all duration-300 animate-scale-up`}
             style={{ animationDelay: `${index * 50}ms` }}
           >
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm group-hover:bg-white/30 transition-all">
-              {item.icon}
+            <div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm group-hover:bg-white/30 transition-all">
+              <div className="scale-90 sm:scale-100">{item.icon}</div>
             </div>
-            <span className="text-white font-semibold text-sm whitespace-nowrap pr-2">
+            <span className="text-white font-semibold text-xs sm:text-sm whitespace-nowrap pr-1 sm:pr-2">
               {item.label}
             </span>
           </Link>
@@ -92,17 +92,17 @@ export default function FloatingActionMenu() {
       {/* Main FAB Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-8 right-8 p-4 rounded-full bg-gradient-to-br from-brand-500 to-accent shadow-glow-lg hover:shadow-glow-xl transition-all duration-300 z-50 group ${
+        className={`fixed bottom-4 sm:bottom-8 right-4 sm:right-8 p-3 sm:p-4 rounded-full bg-gradient-to-br from-brand-500 to-accent shadow-glow-lg hover:shadow-glow-xl transition-all duration-300 z-50 group ${
           isOpen ? 'rotate-45 scale-110' : 'animate-float-fast hover:scale-110'
         }`}
         aria-label="Quick Actions Menu"
       >
         {isOpen ? (
-          <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         ) : (
-          <svg className="w-6 h-6 text-white group-hover:animate-wiggle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white group-hover:animate-wiggle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         )}

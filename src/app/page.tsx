@@ -51,17 +51,17 @@ export default function Home() {
           </div>
 
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.2] tracking-tight max-w-4xl mx-auto mb-3 sm:mb-4 px-2"
+            className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.15] tracking-tight max-w-4xl mx-auto mb-4 sm:mb-4 px-4"
             style={{ animation: "none" }}
           >
             <span
-              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-4"
+              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-2 sm:mb-4"
               style={{ animationDelay: "0.06s" }}
             >
               Share literally
             </span>
             <span
-              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-4 pb-2"
+              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-2 sm:pt-4 pb-2"
               style={{ 
                 animationDelay: "0.16s",
                 backgroundSize: "200% auto"
@@ -72,7 +72,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="text-base sm:text-lg md:text-xl text-white/60 dark:text-white/60 light:text-text-dark/70 max-w-2xl mx-auto animate-fade-up leading-relaxed px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 dark:text-white/60 light:text-text-dark/70 max-w-2xl mx-auto animate-fade-up leading-relaxed px-6 sm:px-4"
             style={{ animationDelay: "0.26s" }}
           >
             Text, files, URLs, QR codes & bio links—all in one place. Zero signup, max vibes fr fr ✨
@@ -80,14 +80,14 @@ export default function Home() {
         </header>
 
         {/* QUICK ACTION GRID - Above the fold */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
           {/* CODE ENTRY - Left side */}
-          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/5 to-white/10 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/10 dark:border-white/10 light:border-brand-300 p-4 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-lg light:shadow-brand-200/50">
+          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/5 to-white/10 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/10 dark:border-white/10 light:border-brand-300 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-lg light:shadow-brand-200/50">
             <div className="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-accent/5 to-brand-500/5 animate-gradient-xy" />
             
             <div className="relative z-10">
-              <div className="text-center mb-4 sm:mb-6">
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
+              <div className="text-center mb-3 sm:mb-6">
+                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
                   Got a code? 👀
                 </h2>
                 <p className="text-xs sm:text-sm text-white/50 dark:text-white/50 light:text-text-dark/60">Enter to access your content</p>
