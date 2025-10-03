@@ -111,10 +111,10 @@ DATABASE_URL
 Value: [Paste your Neon connection string from Step 1]
 
 RESEND_API_KEY
-Value: re_7Mn8UmfX_FHJzakYHswvRvshokM1rs4z6
+Value: [Get your API key from https://resend.com/api-keys]
 
 ADMIN_EMAIL
-Value: omdeshpande123456789@gmail.com
+Value: your-email@example.com
 ```
 
 ### 3.4 Deploy!
