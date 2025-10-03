@@ -55,13 +55,13 @@ export default function Home() {
             style={{ animation: "none" }}
           >
             <span
-              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-2 sm:mb-4"
+              className="block animate-fade-up text-white dark:text-white light:text-text-dark mb-1 sm:mb-2"
               style={{ animationDelay: "0.06s" }}
             >
               Share literally
             </span>
             <span
-              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-2 sm:pt-4 pb-2"
+              className="block animate-fade-up bg-gradient-to-r from-brand-400 via-accent to-brand-500 bg-clip-text text-transparent animate-text-shimmer pt-1 sm:pt-2 pb-2"
               style={{ 
                 animationDelay: "0.16s",
                 backgroundSize: "200% auto"
