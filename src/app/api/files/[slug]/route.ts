@@ -50,7 +50,7 @@ export async function GET(
           mimeType: true,
         },
       });
-      bundleFiles = allBundleFiles.map(f => ({
+      bundleFiles = allBundleFiles.map((f: { slug: string; originalName: string; size: number; mimeType: string }) => ({
         slug: f.slug,
         filename: f.originalName,
         size: f.size,
