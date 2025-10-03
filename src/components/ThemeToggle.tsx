@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   useEffect(() => {
     setMounted(true);
     // init from localStorage or system
-    const saved = localStorage.getItem("textshare:theme");
+    const saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") {
       setTheme(saved);
       applyTheme(saved);
@@ -39,7 +39,7 @@ export default function ThemeToggle() {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
     applyTheme(next);
-    localStorage.setItem("textshare:theme", next);
+    localStorage.setItem("theme", next);
   }
 
   // Prevent hydration mismatch
