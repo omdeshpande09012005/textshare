@@ -45,9 +45,9 @@
   --bg-primary: #faf8f5;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: #ffffff;
-  --text-primary: #0a1828;
-  --text-secondary: rgba(10, 24, 40, 0.7);
-  --text-muted: rgba(10, 24, 40, 0.5);
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --text-muted: #000000;
   --border-primary: rgba(10, 24, 40, 0.1);
   --border-secondary: rgba(10, 24, 40, 0.05);
   --color-surface-900: #faf8f5;
@@ -92,11 +92,11 @@
 }
 
 .light .text-white\/40 {
-  color: rgba(10, 24, 40, 0.4) !important;
+  color: #000000 !important;
 }
 
 .light .text-white\/30 {
-  color: rgba(10, 24, 40, 0.3) !important;
+  color: #000000 !important;
 }
 
 .light .border-white\/10 {

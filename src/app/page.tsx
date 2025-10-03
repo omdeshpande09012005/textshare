@@ -9,18 +9,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-surface-900 text-gray-900 dark:text-white relative overflow-hidden">
       {/* ANIMATED BACKGROUND LAYERS */}
-      <div className="fixed inset-0 pointer-events-none">
+      <div className="fixed inset-0 pointer-events-none z-0">
         {/* Mesh Gradient Base - Subtle Navy */}
-        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-5 dark:opacity-20 md:opacity-5 md:dark:opacity-20" />
+        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-0 dark:opacity-20 md:opacity-0 md:dark:opacity-20" />
         
-        {/* Floating Orbs - Navy Blue Theme - Static on mobile */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 dark:bg-brand-500/10 rounded-full blur-[120px] md:animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 dark:bg-accent/10 rounded-full blur-[120px] md:animate-float-slow" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100 dark:bg-brand-500/5 rounded-full blur-[150px] md:animate-breathe" />
+        {/* Floating Orbs - Navy Blue Theme - Static on mobile, DISABLED in light mode */}
+        <div className="absolute top-20 left-20 w-96 h-96 opacity-0 dark:opacity-100 bg-blue-200 dark:bg-brand-500/10 rounded-full blur-[120px] md:animate-float" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 opacity-0 dark:opacity-100 bg-indigo-200 dark:bg-accent/10 rounded-full blur-[120px] md:animate-float-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-0 dark:opacity-100 bg-blue-100 dark:bg-brand-500/5 rounded-full blur-[150px] md:animate-breathe" />
         
-        {/* Animated Grid - Subtle Navy - No animation on mobile */}
+        {/* Animated Grid - Subtle Navy - No animation on mobile, DISABLED in light mode */}
         <div 
-          className="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] hidden md:block"
+          className="absolute inset-0 opacity-0 dark:opacity-[0.02] hidden md:block"
           style={{
             backgroundImage: `linear-gradient(rgba(26, 95, 180, 0.2) 1px, transparent 1px), 
                              linear-gradient(90deg, rgba(26, 95, 180, 0.2) 1px, transparent 1px)`,
@@ -29,8 +29,8 @@ export default function Home() {
           }}
         />
         
-        {/* Spotlight Effect - No animation on mobile */}
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-100/50 dark:to-surface-900/30 md:animate-spotlight" />
+        {/* Spotlight Effect - No animation on mobile, DISABLED in light mode */}
+        <div className="absolute inset-0 opacity-0 dark:opacity-100 bg-gradient-radial from-transparent via-transparent to-gray-100/50 dark:to-surface-900/30 md:animate-spotlight" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-4 sm:px-6 py-8 sm:py-12 md:py-16">
