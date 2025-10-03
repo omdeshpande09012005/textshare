@@ -52,8 +52,8 @@ async function fetchPasteMeta(slug: string) {
   }
 }
 
-export default async function PastePage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+export default async function PastePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   if (!slug) {
     return (
       <main className="min-h-screen flex items-center justify-center">

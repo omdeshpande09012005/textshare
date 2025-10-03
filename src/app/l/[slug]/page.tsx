@@ -5,7 +5,7 @@ import LinkTreeClient from "@/components/LinkTreeClient";
 import { Metadata } from "next";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 async function getLinkTree(slug: string) {
@@ -32,7 +32,8 @@ async function getLinkTree(slug: string) {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const linkTree = await getLinkTree(params.slug);
+  const { slug } = await params;
+  const linkTree = await getLinkTree(slug);
   
   if (!linkTree) {
     return {
@@ -47,11 +48,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function LinkTreePage({ params }: PageProps) {
-  const linkTree = await getLinkTree(params.slug);
+  const { slug } = await params;
+  const linkTree = await getLinkTree(slug);
 
   if (!linkTree) {
     notFound();
   }
 
-  return <LinkTreeClient linkTree={linkTree} />;
+  return <LinkTreeClient linkTree={linkTree as any} />;
 }

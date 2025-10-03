@@ -260,7 +260,7 @@ export default function ShortenPage() {
               </label>
               <div className="flex items-stretch gap-2">
                 <div className="flex items-center px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white/60 text-sm font-mono">
-                  {window.location.origin}/u/
+                  {typeof window !== 'undefined' ? window.location.origin : ''}/u/
                 </div>
                 <input
                   type="text"
