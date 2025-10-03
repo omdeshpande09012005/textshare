@@ -158,7 +158,7 @@ export default function CodeEntry() {
                   value={char}
                   onChange={(e) => handleChange(index, e.target.value)}
                   onKeyDown={(e) => handleKeyDown(index, e)}
-                  className="w-10 h-12 sm:w-12 sm:h-14 md:w-16 md:h-20 text-center text-xl sm:text-2xl md:text-3xl font-bold rounded-lg sm:rounded-xl bg-white/20 dark:bg-white/10 light:bg-white border-2 border-white/30 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark placeholder-white/30 dark:placeholder-white/20 light:placeholder-text-dark/30 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/25 dark:hover:bg-white/15 light:hover:bg-brand-500/15 hover:border-white/40 dark:hover:border-white/30 light:hover:border-brand-500/40 uppercase shadow-lg"
+                  className="w-9 h-11 sm:w-12 sm:h-14 md:w-16 md:h-20 text-center text-lg sm:text-2xl md:text-3xl font-bold rounded-lg sm:rounded-xl bg-white/20 dark:bg-white/10 light:bg-white border-2 border-white/30 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark placeholder-white/30 dark:placeholder-white/20 light:placeholder-text-dark/30 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 backdrop-blur-sm transition-all duration-300 hover:bg-white/25 dark:hover:bg-white/15 light:hover:bg-brand-500/15 hover:border-white/40 dark:hover:border-white/30 light:hover:border-brand-500/40 uppercase shadow-lg"
                   placeholder="·"
                   disabled={isSubmitting}
                 />
