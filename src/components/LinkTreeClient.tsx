@@ -49,12 +49,12 @@ export default function LinkTreeClient({ linkTree }: { linkTree: LinkTreeData })
             {linkTree.username.charAt(0).toUpperCase()}
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-3 bg-gradient-to-r from-white via-brand-200 to-white dark:from-white dark:via-brand-200 dark:to-white light:from-brand-600 light:via-brand-500 light:to-brand-600 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-white dark:text-white light:text-text-dark">
             @{linkTree.username}
           </h1>
 
           {linkTree.bio && (
-            <p className="text-lg text-white/70 dark:text-white/70 light:text-text-dark/80 max-w-md mx-auto leading-relaxed">
+            <p className="text-lg text-white/70 dark:text-white/70 light:text-text-dark max-w-md mx-auto leading-relaxed">
               {linkTree.bio}
             </p>
           )}
@@ -65,7 +65,7 @@ export default function LinkTreeClient({ linkTree }: { linkTree: LinkTreeData })
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
             </svg>
-            <span className="text-sm text-white/60 dark:text-white/60 light:text-text-dark/70">{linkTree.views.toLocaleString()} views</span>
+            <span className="text-sm text-white/60 dark:text-white/60 light:text-text-dark">{linkTree.views.toLocaleString()} views</span>
           </div>
         </div>
 
@@ -85,10 +85,10 @@ export default function LinkTreeClient({ linkTree }: { linkTree: LinkTreeData })
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-shine animate-shimmer" />
 
               <div className="relative z-10 flex items-center justify-between">
-                <span className="text-lg font-semibold text-white dark:text-white light:text-text-dark group-hover:text-brand-200 dark:group-hover:text-brand-200 light:group-hover:text-brand-600 transition-colors">
+                <span className="text-lg font-semibold text-white dark:text-white light:text-text-dark group-hover:text-brand-200 dark:group-hover:text-brand-200 light:group-hover:text-brand-700 transition-colors">
                   {link.title}
                 </span>
-                <svg className="w-5 h-5 text-white/40 dark:text-white/40 light:text-text-dark/50 group-hover:text-white dark:group-hover:text-white light:group-hover:text-brand-600 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-5 h-5 text-white/40 dark:text-white/40 light:text-text-dark group-hover:text-white dark:group-hover:text-white light:group-hover:text-brand-700 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
@@ -101,7 +101,7 @@ export default function LinkTreeClient({ linkTree }: { linkTree: LinkTreeData })
           <div className="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-accent/5 to-brand-500/5 animate-gradient-xy" />
           
           <div className="relative z-10">
-            <h3 className="text-sm font-semibold text-white/80 dark:text-white/80 light:text-text-dark mb-3 text-center">Share This Page</h3>
+            <h3 className="text-sm font-semibold text-white/80 dark:text-white/80 light:text-text-dark/90 mb-3 text-center">Share This Page</h3>
             
             <button
               onClick={handleCopyLink}
