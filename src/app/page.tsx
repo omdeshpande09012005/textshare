@@ -72,7 +72,7 @@ export default function Home() {
           </h1>
 
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-white/60 max-w-2xl mx-auto animate-fade-up leading-relaxed px-6 sm:px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/60 dark:text-white/60 light:text-text-dark/70 max-w-2xl mx-auto animate-fade-up leading-relaxed px-6 sm:px-4"
             style={{ animationDelay: "0.26s" }}
           >
             Text, files, URLs, QR codes & bio links—all in one place. Zero signup, max vibes fr fr ✨
@@ -82,15 +82,15 @@ export default function Home() {
         {/* QUICK ACTION GRID - Above the fold */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
           {/* CODE ENTRY - Left side */}
-          <div className="relative rounded-xl sm:rounded-2xl bg-white dark:bg-gradient-to-br dark:from-white/5 dark:to-white/10 border border-blue-200 dark:border-white/10 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 dark:from-brand-500/5 dark:via-accent/5 dark:to-brand-500/5 animate-gradient-xy" />
+          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/5 to-white/10 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/10 dark:border-white/10 light:border-brand-300 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-lg light:shadow-brand-200/50">
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-accent/5 to-brand-500/5 animate-gradient-xy" />
             
             <div className="relative z-10">
               <div className="text-center mb-3 sm:mb-6">
-                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
+                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
                   Got a code? 👀
                 </h2>
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-white/50">Enter to access your content</p>
+                <p className="text-xs sm:text-sm text-white/50 dark:text-white/50 light:text-text-dark/60">Enter to access your content</p>
               </div>
 
               <CodeEntry />
