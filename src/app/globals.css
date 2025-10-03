@@ -657,6 +657,24 @@ button:disabled {
   .card-hover:hover {
     transform: translateY(-4px) scale(1.01);
   }
+  
+  /* Reduce animations on mobile to prevent flickering */
+  .animate-aurora,
+  .animate-float,
+  .animate-float-slow,
+  .animate-breathe,
+  .animate-gradient-xy,
+  .animate-spotlight,
+  .animate-shimmer,
+  .animate-text-shimmer {
+    animation-duration: 0s !important;
+    animation: none !important;
+  }
+  
+  /* Simplify background animations */
+  [class*="animate-"]:not(.animate-fade-up):not(.animate-pulse) {
+    animation-duration: 0s !important;
+  }
 }
 
 /* ============================================

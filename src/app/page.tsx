@@ -11,16 +11,16 @@ export default function Home() {
       {/* ANIMATED BACKGROUND LAYERS */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Mesh Gradient Base - Subtle Navy */}
-        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-5 dark:opacity-20" />
+        <div className="absolute inset-0 bg-mesh-gradient animate-aurora opacity-5 dark:opacity-20 md:opacity-5 md:dark:opacity-20" />
         
-        {/* Floating Orbs - Navy Blue Theme */}
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 dark:bg-brand-500/10 rounded-full blur-[120px] animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 dark:bg-accent/10 rounded-full blur-[120px] animate-float-slow" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100 dark:bg-brand-500/5 rounded-full blur-[150px] animate-breathe" />
+        {/* Floating Orbs - Navy Blue Theme - Static on mobile */}
+        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-200 dark:bg-brand-500/10 rounded-full blur-[120px] md:animate-float" />
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-200 dark:bg-accent/10 rounded-full blur-[120px] md:animate-float-slow" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-100 dark:bg-brand-500/5 rounded-full blur-[150px] md:animate-breathe" />
         
-        {/* Animated Grid - Subtle Navy */}
+        {/* Animated Grid - Subtle Navy - No animation on mobile */}
         <div 
-          className="absolute inset-0 opacity-[0.04] dark:opacity-[0.02]"
+          className="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] hidden md:block"
           style={{
             backgroundImage: `linear-gradient(rgba(26, 95, 180, 0.2) 1px, transparent 1px), 
                              linear-gradient(90deg, rgba(26, 95, 180, 0.2) 1px, transparent 1px)`,
@@ -29,8 +29,8 @@ export default function Home() {
           }}
         />
         
-        {/* Spotlight Effect */}
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-100/50 dark:to-surface-900/30 animate-spotlight" />
+        {/* Spotlight Effect - No animation on mobile */}
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-100/50 dark:to-surface-900/30 md:animate-spotlight" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1100px] px-4 sm:px-6 py-8 sm:py-12 md:py-16">
@@ -82,15 +82,15 @@ export default function Home() {
         {/* QUICK ACTION GRID - Above the fold */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8 animate-fade-up px-2 sm:px-0" style={{ animationDelay: "0.3s" }}>
           {/* CODE ENTRY - Left side */}
-          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/5 to-white/10 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/10 dark:border-white/10 light:border-brand-300 p-3 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-lg light:shadow-brand-200/50">
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-500/5 via-accent/5 to-brand-500/5 animate-gradient-xy" />
+          <div className="relative rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/10 to-white/5 dark:from-white/5 dark:to-white/10 light:from-white light:to-brand-50 border border-white/20 dark:border-white/10 light:border-brand-300 p-4 sm:p-6 md:p-8 backdrop-blur-xl overflow-hidden shadow-xl light:shadow-brand-200/50">
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-500/10 via-accent/10 to-brand-500/10 dark:from-brand-500/5 dark:via-accent/5 dark:to-brand-500/5 animate-gradient-xy" />
             
             <div className="relative z-10">
-              <div className="text-center mb-3 sm:mb-6">
-                <h2 className="text-base sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
+              <div className="text-center mb-4 sm:mb-6">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white dark:text-white light:text-text-dark mb-1 sm:mb-2">
                   Got a code? 👀
                 </h2>
-                <p className="text-xs sm:text-sm text-white/50 dark:text-white/50 light:text-text-dark/60">Enter to access your content</p>
+                <p className="text-sm sm:text-sm text-white/70 dark:text-white/50 light:text-text-dark/60">Enter to access your content</p>
               </div>
 
               <CodeEntry />
