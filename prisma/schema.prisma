@@ -1,0 +1,80 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Paste {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String?
+  content      String
+  contentType  String   @default("text")
+  passwordHash String?
+  maxViews     Int?
+  viewCount    Int      @default(0)
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime?
+}
+
+model Url {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  originalUrl  String
+  title        String?
+  passwordHash String?
+  clicks       Int      @default(0)
+  maxClicks    Int?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime?
+  
+  @@index([slug])
+}
+
+model File {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  filename     String
+  originalName String
+  mimeType     String
+  size         Int
+  title        String?
+  passwordHash String?
+  downloadCount Int     @default(0)
+  maxDownloads Int?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime?
+  bundleSlug   String?
+  
+  @@index([slug])
+  @@index([bundleSlug])
+}
+
+model LinkTree {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  username  String
+  bio       String?
+  links     Json
+  views     Int      @default(0)
+  createdAt DateTime @default(now())
+  
+  @@index([slug])
+}
+
+model QRCode {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  url       String
+  title     String?
+  qrStyle   String   @default("squares")
+  qrColor   String   @default("#7c3aed")
+  bgColor   String   @default("#ffffff")
+  views     Int      @default(0)
+  createdAt DateTime @default(now())
+  
+  @@index([slug])
+}
