@@ -380,7 +380,7 @@ export default function CreatePage() {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   placeholder="My awesome code"
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -392,7 +392,7 @@ export default function CreatePage() {
                   <select
                     value={contentType}
                     onChange={(e) => setContentType(e.target.value)}
-                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
+                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
                   >
                     <option value="text" className="bg-surface-800">Plain text</option>
                     <option value="markdown" className="bg-surface-800">Markdown</option>
@@ -417,7 +417,7 @@ export default function CreatePage() {
                   <select
                     value={codeLanguage}
                     onChange={(e) => setCodeLanguage(e.target.value)}
-                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
+                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
                   >
                     {codeLanguages.map((lang) => (
                       <option key={lang.value} value={lang.value} className="bg-surface-800">
@@ -445,7 +445,7 @@ export default function CreatePage() {
                 placeholder={contentType === "code" ? "// Paste your code here..." : contentType === "markdown" ? "# Paste your markdown here..." : "Paste your text here..."}
                 rows={14}
                 required
-                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all font-mono text-sm resize-none"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all font-mono text-sm resize-none"
               />
             </div>
 
@@ -460,7 +460,7 @@ export default function CreatePage() {
                   <select
                     value={expiry}
                     onChange={(e) => setExpiry(e.target.value)}
-                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
+                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
                   >
                     {expiryOptions.map((o) => (
                       <option key={o.value} value={o.value} className="bg-surface-800">
@@ -486,7 +486,7 @@ export default function CreatePage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Protect with password"
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                 />
               </div>
             </div>

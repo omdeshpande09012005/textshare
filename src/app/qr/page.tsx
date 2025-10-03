@@ -269,7 +269,7 @@ export default function QRGeneratorPage() {
                     onChange={(e) => setUrl(e.target.value)}
                     placeholder="https://example.com"
                     required
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
                   />
                 </div>
 
@@ -283,7 +283,7 @@ export default function QRGeneratorPage() {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="My Awesome QR Code"
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
                   />
                 </div>
 

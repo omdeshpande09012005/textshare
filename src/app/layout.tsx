@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -19,8 +19,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               (function() {
                 try {
                   const theme = localStorage.getItem('theme') || 'dark';
-                  document.documentElement.classList.add(theme);
-                } catch (e) {}
+                  const html = document.documentElement;
+                  html.classList.remove('light', 'dark');
+                  html.classList.add(theme);
+                  html.style.colorScheme = theme;
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                  document.documentElement.style.colorScheme = 'dark';
+                }
               })();
             `,
           }}

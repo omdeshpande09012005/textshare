@@ -135,7 +135,7 @@ export default function LinkTreePage() {
                   placeholder="yourname"
                   required
                   maxLength={50}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all"
                 />
                 <p className="text-[10px] sm:text-xs text-white/40 dark:text-white/40 light:text-text-dark/60 mt-1.5 sm:mt-2">
                   This will be your display name on the page
@@ -156,7 +156,7 @@ export default function LinkTreePage() {
                   placeholder="Tell people about yourself..."
                   rows={3}
                   maxLength={200}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all resize-none"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg sm:rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black text-sm sm:text-base placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent backdrop-blur-sm transition-all resize-none"
                 />
                 <p className="text-[10px] sm:text-xs text-white/40 dark:text-white/40 light:text-text-dark/60 mt-1.5 sm:mt-2">
                   {bio.length}/200 characters
@@ -185,14 +185,14 @@ export default function LinkTreePage() {
                             value={link.title}
                             onChange={(e) => updateLink(link.id, "title", e.target.value)}
                             placeholder={`Link title (e.g., Instagram)`}
-                            className="w-full px-2.5 sm:px-3 py-2 rounded-lg bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                            className="w-full px-2.5 sm:px-3 py-2 rounded-lg bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
                           />
                           <input
                             type="url"
                             value={link.url}
                             onChange={(e) => updateLink(link.id, "url", e.target.value)}
                             placeholder="https://example.com"
-                            className="w-full px-2.5 sm:px-3 py-2 rounded-lg bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-white dark:text-white light:text-text-dark placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                            className="w-full px-2.5 sm:px-3 py-2 rounded-lg bg-white/10 dark:bg-white/10 light:bg-white/50 border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white light:text-black placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
                           />
                         </div>
                         

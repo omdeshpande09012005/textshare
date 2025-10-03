@@ -246,7 +246,7 @@ export default function ShortenPage() {
                 onChange={(e) => setOriginalUrl(e.target.value)}
                 placeholder="https://example.com/very/long/url/that/needs/shortening"
                 required
-                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
               />
             </div>
 
@@ -268,7 +268,7 @@ export default function ShortenPage() {
                   onChange={(e) => setCustomSlug(e.target.value.toLowerCase().replace(/[^a-z0-9-_]/g, ''))}
                   placeholder="my-custom-link"
                   pattern="[a-z0-9-_]+"
-                  className="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all font-mono"
+                  className="flex-1 px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all font-mono"
                 />
               </div>
               <p className="text-xs text-white/50 mt-2 flex items-start gap-1">
@@ -289,7 +289,7 @@ export default function ShortenPage() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="My awesome link"
-                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
               />
             </div>
 
@@ -304,7 +304,7 @@ export default function ShortenPage() {
                   <select
                     value={expiresIn}
                     onChange={(e) => setExpiresIn(e.target.value)}
-                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
+                    className="w-full px-4 py-3 pr-10 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all cursor-pointer appearance-none"
                   >
                     <option value="never" className="bg-surface-800">Never</option>
                     <option value="1h" className="bg-surface-800">1 hour</option>
@@ -331,7 +331,7 @@ export default function ShortenPage() {
                   onChange={(e) => setMaxClicks(e.target.value)}
                   placeholder="Unlimited"
                   min="1"
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
                 />
               </div>
             </div>
@@ -346,7 +346,7 @@ export default function ShortenPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Protect with password"
-                className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 rounded-xl bg-white/10 dark:bg-white/10 light:bg-white border border-white/20 dark:border-white/20 light:border-brand-300 text-black dark:text-white placeholder-white/40 dark:placeholder-white/40 light:placeholder-text-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
               />
             </div>
 
