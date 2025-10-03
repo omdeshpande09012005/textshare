@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-surface-900 text-white antialiased">
+      <body className="bg-gray-50 dark:bg-surface-900 text-gray-900 dark:text-white antialiased">
         {/* top nav - full width */}
         <header className="sticky top-0 z-40 w-full">
           <Navbar />
