@@ -130,6 +130,22 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/terms" className="text-sm text-black hover:text-brand-600 dark:text-white/60 dark:hover:text-brand-400 flex items-center gap-2 group">
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-sm text-black hover:text-brand-600 dark:text-white/60 dark:hover:text-brand-400 flex items-center gap-2 group">
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
